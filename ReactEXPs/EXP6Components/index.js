@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import NewFun from './newfun';
+import NewClass from './newclass';
 // import App from './App';
 import Newclass from './newclass';
 import reportWebVitals from './reportWebVitals';
