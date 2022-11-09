@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-function Hooks1() {
+export default function Hooks1() {
   const [count, setCount] = useState(0);
-  const [name, setName] = useState("Ayush Singh");
+  const [name, setName] = useState("shubham");
   return (
     <div>
       <p>You clicked {count} times</p>
@@ -10,11 +10,9 @@ function Hooks1() {
         Click me
       </button>
       <p>Name - {name}</p>
-      <button onClick={() => setName("Shivam Singh")}>
+      <button onClick={() => setName("SHUBHAM CHAVAN")}>
         Click me
       </button>
     </div>
   );
 }
-
-export default Hooks1;
