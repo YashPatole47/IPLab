@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<title>Write classes and inheritance using ES6 with example</title>
+	<head>
+		<script type="text/javascript">
+			class stud
+			{
+				constructor(name)
+				{
+					this.sname=name;
+				}
+				placement()
+				{
+					return `hi i am ${this.sname}`;
+				}
+			}
+			class stud1 extends stud
+			{
+				constructor(name)
+				{
+					super(name);
+				
+				}
+			}
+			let stu1 = new stud1('Yash');
+			console.log(stu1.placement());
+		</script>
+	</head>
+</html>
