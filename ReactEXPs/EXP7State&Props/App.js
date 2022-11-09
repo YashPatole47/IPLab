@@ -1,17 +1,38 @@
-// import logo from './logo.svg';
 import './App.css';
-import Props1 from './Props1';
-import State1 from './State1';
+import React from 'react';
+import render from '@testing-library/react';
+import first from './first';
+import { useState } from 'react';
+import Newclass from './newclass';
 
-function App() {
-  return (
-    <div>
-      <Props1 name="Ayush" />
-      <Props1 name="Prajwal" />
-      <Props1 name="Manaswi" />
-      <State1 />
-    </div>
-  );
+export default class App extends React.Component 
+{
+  constructor(props) {
+    super(props);
+    this.state = {
+        value: 'Test'
+    };
 }
 
-export default App;
+onChange= e =>{
+  this.setState({ value: e.target.value});
+}
+
+onSubmit = e => {
+  const { value } = this.state;
+  e.preventDefault();
+  console.log(value);
+}
+render()
+{
+  const {value} = this.state;
+return(
+<div className="App">
+<div>This is the value getting from input field.</div>
+<form onSubmit={this.onSubmit}>
+<input name="Test" onChange={this.onChange} value={value}  /> 
+              </form>
+</div>
+);
+}
+}
